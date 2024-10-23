@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>행사 안내</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* 전체 페이지 기본 스타일 */
         body {
@@ -19,6 +18,7 @@
             color: #333;
         }
 
+        /* 맵 이미지 컨테이너 */
         .map-container {
             position: relative;
             width: 100%;
@@ -26,34 +26,61 @@
             margin: 0 auto;
         }
 
+        /* 이미지: 반응형으로 크기 조정 */
         .map-container img {
             width: 100%;
             height: auto;
-            loading: lazy; /* 이미지 로딩 최적화 */
+            display: block;
         }
 
+        /* 버튼 기본 스타일 */
         .button {
             position: absolute;
             padding: 10px;
             font-size: 14px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
+            background-color: transparent; /* 배경을 투명하게 설정 */
+            color: transparent; /* 텍스트 색상을 투명하게 설정 */
+            border: none; /* 테두리 제거 */
             cursor: pointer;
             transform: translate(-50%, -50%);
+            outline: none; /* 포커스 시 테두리 제거 */
         }
 
-        .cheongryong-btn { top: 8%; left: 44%; }
-        .joojok-btn { top: 60%; left: 53%; }
-        .hyeonmu-btn { top: 79%; left: 56%; }
-        .baekho-btn { top: 65%; left: 27%; }
+        /* 청룡존 버튼 */
+        .cheongryong-btn {
+            top: 8%;  
+            left: 44%; 
+        }
 
+        /* 주작존 버튼 */
+        .joojok-btn {
+            top: 60%;
+            left: 53%;
+        }
+
+        /* 현무존 버튼 */
+        .hyeonmu-btn {
+            top: 79%;
+            left: 56%;
+        }
+
+        /* 백호존 버튼 */
+        .baekho-btn {
+            top: 65%;
+            left: 27%;
+        }
+
+        /* 반응형 디자인 */
         @media (max-width: 600px) {
             .button {
                 padding: 8px;
                 font-size: 12px;
             }
+        }
+
+        /* 버튼에 마우스를 올렸을 때의 효과 */
+        .button:hover {
+            background-color: rgba(0, 123, 255, 0.3); /* 마우스 오버 시 반투명 배경 */
         }
     </style>
 </head>
@@ -62,10 +89,10 @@
     <div class="map-container">
         <img src="images/event-map.png" alt="행사 안내도">
 
-        <button class="button cheongryong-btn" aria-label="청룡존" onclick="location.href='cheongryong.html'">청룡존</button>
-        <button class="button joojok-btn" aria-label="주작존" onclick="location.href='joojok.html'">주작존</button>
-        <button class="button hyeonmu-btn" aria-label="현무존" onclick="location.href='hyeonmu.html'">현무존</button>
-        <button class="button baekho-btn" aria-label="백호존" onclick="location.href='baekho.html'">백호존</button>
+        <button class="button cheongryong-btn" onclick="location.href='cheongryong.html'"></button>
+        <button class="button joojok-btn" onclick="location.href='joojok.html'"></button>
+        <button class="button hyeonmu-btn" onclick="location.href='hyeonmu.html'"></button>
+        <button class="button baekho-btn" onclick="location.href='baekho.html'"></button>
     </div>
 </body>
 </html>
