@@ -16,6 +16,10 @@
         h1 {
             text-align: center;
             color: #333;
+            font-size: 5vw; /* 뷰포트 너비에 따라 크기 조절 */
+            white-space: nowrap; /* 줄바꿈 방지 */
+            overflow: hidden; /* 넘치는 텍스트 숨기기 */
+            text-overflow: ellipsis; /* 넘치는 텍스트에 점(...) 표시 */
         }
 
         /* 맵 이미지 컨테이너 */
@@ -96,4 +100,5 @@
     </div>
 </body>
 </html>
+
 
