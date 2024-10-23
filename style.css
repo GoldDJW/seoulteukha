@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행사 안내</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* 전체 페이지 기본 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .map-container img {
+            width: 100%;
+            height: auto;
+            loading: lazy; /* 이미지 로딩 최적화 */
+        }
+
+        .button {
+            position: absolute;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transform: translate(-50%, -50%);
+        }
+
+        .cheongryong-btn { top: 8%; left: 44%; }
+        .joojok-btn { top: 60%; left: 53%; }
+        .hyeonmu-btn { top: 79%; left: 56%; }
+        .baekho-btn { top: 65%; left: 27%; }
+
+        @media (max-width: 600px) {
+            .button {
+                padding: 8px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>행사 안내도</h1>
+    <div class="map-container">
+        <img src="images/event-map.png" alt="행사 안내도">
+
+        <button class="button cheongryong-btn" aria-label="청룡존" onclick="location.href='cheongryong.html'">청룡존</button>
+        <button class="button joojok-btn" aria-label="주작존" onclick="location.href='joojok.html'">주작존</button>
+        <button class="button hyeonmu-btn" aria-label="현무존" onclick="location.href='hyeonmu.html'">현무존</button>
+        <button class="button baekho-btn" aria-label="백호존" onclick="location.href='baekho.html'">백호존</button>
+    </div>
+</body>
+</html>
+
